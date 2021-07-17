@@ -1,0 +1,25 @@
+<html>
+    <body style="text-align: center; color: aquamarine;">
+        WELCOME!!! {{user.Name}}
+        <table>
+            <tr>
+                <td>
+                   {{user.Age}}
+                </td>
+                <td>
+                    {{user.Email}}
+                </td>
+                <td>
+                    <img src="{{ user.Photo.url }}" height = 300px width = 300px>
+                </td>
+            </tr>
+        </table>
+        <a href="{% url 'app1:update' user.id %}" >update</a>
+        <br>
+        <a href="{% url 'app1:changePassword' user.id %}">changePassword</a>
+        <br>
+        <a href="{% url 'app1:logout' %}">logout</a>
+
+    </body>
+
+</html>
